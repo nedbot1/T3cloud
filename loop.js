@@ -24,7 +24,7 @@
 // }
 
 // console.log("You chose not to continue!");
-
+//while loop
 const readline = require("readline-sync");
 
 let num = Number(
