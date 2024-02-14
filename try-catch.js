@@ -1,10 +1,6 @@
 try {
-  // try {
   i + 1;
-  console.log("Will it print here?");
-  // } catch (e) {
-  // 	console.log("Here?")
-  // }
+  console.log("will i get print");
 } catch (e) {
   console.log(e);
 }
