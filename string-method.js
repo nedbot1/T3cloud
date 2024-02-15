@@ -46,49 +46,39 @@
 // }
 // console.log(longestWord("i am happy"));
 
-// function ConvertToCentury(year) {
-//   var century = Math.ceil(year / 100);
-//   var remainder = century % 10;
+function convertToCentury(year) {
+  var century = Math.ceil(year / 100);
 
-//   return century;
-// }
-// console.log("it is " + ConvertToCentury(1800) + " century");
-
-// function convertToCentury(year) {
-//   var century = Math.ceil(year / 100);
-
-//   var suffix = "th";
-//   if (century % 100 >= 10 && century % 100 <= 20) {
-//     suffix = "th";
-//   } else if (century % 10 === 1) {
-//     suffix = "st";
-//   } else if (century % 10 === 2) {
-//     suffix = "nd";
-//   } else if (century % 10 === 3) {
-//     suffix = "rd";
-//   }
-
-//   // Return the century with the suffix
-//   return century + suffix + " century";
-// }
-
-// // Example usage
-// console.log(convertToCentury(1800));
-// console.log(convertToCentury(1999));
-// console.log(convertToCentury(2024));
-var counter = 0;
-function CheckVowels(word) {
-  for (var i = 0; i < word.length; i++) {
-    if ("aeiou".includes(word[i])) {
-      counter++;
-    }
+  var suffix = "th";
+  if (century % 100 >= 10 && century % 100 <= 20) {
+    suffix = "th";
+  } else if (century % 10 === 1) {
+    suffix = "st";
+  } else if (century % 10 === 2) {
+    suffix = "nd";
+  } else if (century % 10 === 3) {
+    suffix = "rd";
   }
-  return counter;
+
+  // Return the century with the suffix
+  return century + suffix + " century";
 }
 
 // Example usage
-console.log(CheckVowels("hello")); // Output: 2
-console.log(CheckVowels("world")); // Output: 1
-console.log(CheckVowels("fly")); // Output: 0
-console.log(CheckVowels("sky")); // Output: 0
-console.log(CheckVowels("Elephant")); // Output: 3
+console.log(convertToCentury(1800));
+console.log(convertToCentury(1999));
+console.log(convertToCentury(2024));
+
+// var rl = require("readline-sync");
+
+// var tweet = rl.question("write your tweet \n");
+// var newtweet = tweet.slice(0, 20);
+// var tweetCount = tweet.length;
+// console.log(
+//   "you have written " +
+//     tweetCount +
+//     " characters and you have left " +
+//     (20 - tweetCount) +
+//     " characters left" +
+//     newtweet
+// );

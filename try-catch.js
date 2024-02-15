@@ -1,3 +1,4 @@
+//var i = 1;
 try {
   i + 1;
   console.log("will i get print");
