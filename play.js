@@ -83,15 +83,37 @@
 // }
 // console.log(countVowels("a quick brown fox jumps over a lazy dog"));
 
-function countVowels(str) {
-  var count = 0;
-  for (var i = 0; i < str.length; i++) {
-    if ("aeiou".includes(str[i])) {
-      count = count + 1;
-    }
-  }
-  const plural = count > 1 ? "s" : "";
+// function countVowels(str) {
+//   var count = 0;
+//   for (var i = 0; i < str.length; i++) {
+//     if ("aeiou".includes(str[i])) {
+//       count = count + 1;
+//     }
+//   }
+//   const plural = count > 1 ? "s" : "";
 
-  return "it contain " + count + " vowel" + plural;
-}
-console.log(countVowels("a"));
+//   return "it contain " + count + " vowel" + plural;
+// }
+// console.log(countVowels("a"));
+
+// function removeVowels(str) {
+//   var x = 0;
+//   for (var i = 0; i < str.length; i++) {
+//     if ("aeiou".includes(str[i])) {
+//     }
+//   }
+// }
+
+// function removeVowels(str) {
+//   const vowels = ["a", "e", "i", "o", "u"];
+//   var result = [];
+//   var words = str.toLowerCase().split("");
+
+//   for (var i = 0; i < words.length; i++) {
+//     if (!vowels.includes(words[i])) {
+//       result.push(words[i]);
+//     }
+//   }
+//   return result.join("");
+// }
+// console.log(removeVowels("TOBDHEN"));
