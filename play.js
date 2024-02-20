@@ -117,3 +117,53 @@
 //   return result.join("");
 // }
 // console.log(removeVowels("TOBDHEN"));
+
+function sumArray(arr) {
+  // Check if the input is an array
+  if (!Array.isArray(arr)) {
+    return "Input must be an array";
+  }
+
+  // Check if the array has at least two elements
+  if (arr.length <= 1) {
+    return 0;
+  }
+
+  // Check if all elements in the array are numbers
+  if (!arr.every((num) => typeof num === "number")) {
+    return "All elements in the array must be numbers";
+  }
+
+  // Find the minimum and maximum values in the array
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+
+  // Initialize sum to 0
+  let sum = 0;
+
+  // Loop through the array and add up all the numbers except the min and max
+  for (let num of arr) {
+    if (num !== min && num !== max) {
+      sum += num;
+    }
+  }
+
+  return sum;
+}
+
+// Example usage
+let arr = [1, 2, 3, 4];
+console.log(sumArray(arr)); // Output: 9
+
+// Input validation
+// try {
+//   sumArray("not an array");
+// } catch (error) {
+//   console.error(error.message); // Output: Input must be an array
+// }
+
+// try {
+//   sumArray([1, "two", 3]);
+// } catch (error) {
+//   console.error(error.message); // Output: All elements in the array must be numbers
+// }
