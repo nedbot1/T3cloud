@@ -1,0 +1,24 @@
+a {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* #sudoku-container {
+	display: flex;
+} */
+
+.sudoku-row {
+  display: flex;
+}
+
+.top-nav-link {
+  background-color: aqua;
+}
+
+.sudoku-square {
+  display: flex;
+  flex-basis: 60px;
+  border: 4px solid black;
+  height: 60px;
+  width: 60px;
+}
